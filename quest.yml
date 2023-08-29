@@ -1,0 +1,27 @@
+id: intro_mongo_atlas_db
+title: Introduction to MongoDB Atlas
+subtitle: "Level up your skills: Create, Query and Update a MongoDB Atlas Cluster"
+description: In this quest, you'll learn the basics of MongoDB Atlas, a fully
+  managed database-as-a-service for MongoDB. You'll create a new cluster,
+  configure the connection string, and access the database to read data. Along
+  the way, you'll explore Atlas's features and gain experience working with a
+  cloud-based NoSQL database.
+summary: Congratulations! In this quest, you created a MongoDB Atlas cluster,
+  configured the connection string, and accessed the database to read data.
+  You've explored Atlas's features and leveled up your skills with a cloud-based
+  NoSQL database.
+skills:
+  - backend
+  - database
+  - operations
+
+steps:
+  - create_mongo_atlas_cluster
+  - configure_connection_string
+  - load_data_and_read
+  - update_data
+
+level: intermediate
+type: custom
+duration: 1.5
+repository: null

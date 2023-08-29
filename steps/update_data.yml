@@ -1,0 +1,55 @@
+id: update_data
+learningObjectives:
+  - Update data in MongoDB
+
+hints:
+  - "Search for the movie `Stephen Hawking's Universe` in the `movies` collection under the `sample_mflix` database."
+  - "Once you find the movie, you'll see the `year` field has the letter `e` in it, which is wrong."
+  - "There are different ways to update the data: the Atlas UI, the mongo shell, or the mongo API."
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Oh no, I think some of the data is corrupted!"
+          - text: "I was told that the `Stephen Hawking's Universe` series is missing from our app, because its `year` field is malformed and has a wrong type"
+          - text: ":instruction[Tell me when it is fixed]"
+
+trigger:
+  type: user_message
+  params:
+    person: lucca
+  flowNode:
+    do:
+    - actionId: mongo_query_find
+      name: mongo_find_result
+      params:
+        databaseName: sample_mflix
+        collectionName: movies
+        uri: "${user.integrations.mongoAtlas.connectionString}"
+        query:
+          title: "Stephen Hawking's Universe"
+          
+    if:
+      conditions:
+      - conditionId: is_truthy
+        params:
+          value: "${outputs.mongo_find_result.data[0]?.year === 2010}"
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: Nice job! I can see the `year` is updated to 2010 now, this will make sure our data is presented correctly. 
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: I don't think you fixed it yet. Are you sure the `year` field was update to `2010` with type `int32`?
+

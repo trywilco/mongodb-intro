@@ -1,0 +1,59 @@
+id: configure_connection_string
+learningObjectives:
+  - Configure the connection string for the MongoDB Atlas cluster
+hints:
+  - A connection string should include the username and password you chose when creating the cluster, and the cluster name.
+  - "The connection string should look like this: `mongodb+srv://<username>:<password>@<cluster-url>/test?retryWrites=true&w=majority`"
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: First, let's configure the `connection string` for the MongoDB Atlas cluster.
+          - text: Go to `Security -> Quick start, :instruction[choose a username and password that will be used in the connection string].
+          - text: Next, you should allow access from anywhere. :instruction[Add the IP `0.0.0.0` in the `IP Access List` at the bottom of the page].
+          - text: Lastly, go to `Deployment -> Database` tab, and click `connect`. There you'll find the full `connection string`. Just don't forget to place the correct username and password in the placeholders.
+          - text: :instruction[Copy the `connection string` and paste it here]
+          
+
+trigger:
+  type: user_message
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_match_regex
+        name: check_connection_string
+        params:
+          text: "${userMessageText}"
+          regex: "^mongodb"
+
+      - conditionId: database_check_connection_url
+        params:
+          type: mongodb
+          url: "${userMessageText}"
+
+      then:
+        do:
+        - actionId: user_set_integration_property
+          params:
+            integration: mongo_atlas
+            key: connectionString
+            value: ${userMessageText}
+
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That connection string looks good! we are ready to move on to the next step."
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's not correct, try again!"
+              delay: 500

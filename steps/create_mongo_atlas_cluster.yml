@@ -1,0 +1,32 @@
+id: create_mongo_atlas_cluster
+learningObjectives:
+  - Create a MongoDB Atlas account and a new cluster
+hints:
+  - Once logged in, navigate to the 'Clusters' page and create a new one.  
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: We are going to learn today about MongoDB Atlas, a managed Database as a Service (DBaaS) from the makers of MongoDB.
+          - text: First up, let's create a MongoDB Atlas account so we can create our first Atlas cluster.
+          - text: Sign up to Atlas at https://www.mongodb.com/atlas/database and complete the email verification.
+          - text: Next you'll be asked to choose the pricing tier, be sure to choose the free tier, named `M0'.
+          - text: Lastly, choose any cloud provider you'd like, and tell me when you are finished.
+
+    - actionId: ready_message
+      params:
+        person: lucca
+
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: bot_message
+        params:
+          person: lucca
+          messages:
+            - text: "Great! You've created your first MongoDB Atlas cluster. Let's move on to the next step."
+      - actionId: finish_step

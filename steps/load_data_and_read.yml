@@ -1,0 +1,50 @@
+id: load_data_and_read
+learningObjectives:
+  - Load and read data
+hints:
+  - "The structure of a mongo query is: `{field: value}`"
+  - The field of the movie title is `title` and the value is `The Shawshank Redemption`
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Now, we should load some data into our database."
+          - text: "Go over to `Deployment -> Database` and click on `Load Sample Data`. This will take a few minutes." 
+          - text: "Once the data is loaded, click on `Browse Collections`"
+          - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
+          - text: "We are ready to run our first query! :instruction[Can you tell me in what year the movie `The Shawshank Redemption` was released?]"
+
+trigger:
+  type: user_message
+  params:
+    person: lucca
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          - "94"
+
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's right! The Shawshank Redemption was released in 1994. What a time to be alive!"
+              delay: 1300
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's not correct, try again!"
+              delay: 500
+
