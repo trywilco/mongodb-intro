@@ -12,7 +12,7 @@ startFlow:
         messages:
           - text: We are going to learn today about MongoDB Atlas, a managed Database as a Service (DBaaS) from the makers of MongoDB.
           - text: First up, let's create a MongoDB Atlas account so we can create our first Atlas cluster.
-          - text: Sign up to Atlas at https://www.mongodb.com/atlas/database and complete the email verification.
+          - text: Sign up to Atlas at https://www.mongodb.com/cloud/atlas/register and complete the email verification.
           - text: Next you'll be asked to choose the pricing tier, be sure to choose the free tier, named `M0`.
           - text: Lastly, choose a name for your cluster and any cloud provider and region you'd like.
           - text: Tell me when you're done, that's when you're directed to the Atlas dashboard.
