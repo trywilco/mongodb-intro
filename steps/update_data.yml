@@ -54,5 +54,8 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: I see the issue is still exists. Are you sure you fixed it?
+            - text: I see the issue is still exists. Are you sure you fixed it? let's try again.
+        - actionId: ready_message
+          params:
+            person: lucca
 
