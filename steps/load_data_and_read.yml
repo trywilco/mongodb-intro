@@ -4,7 +4,7 @@ learningObjectives:
 hints:
   - "The structure of a mongo query is: `{field: value}`"
   - The field of the movie title is `title` and the value is `The Shawshank Redemption`
-  - "You can run a query using the UI. Head over to the relevant collection and type the query in the input box".
+  - "You can run a query using the UI. Head over to the relevant collection and type the query in the input box"
 
 startFlow:
   do:
