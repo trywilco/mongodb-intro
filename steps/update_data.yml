@@ -5,6 +5,7 @@ learningObjectives:
 hints:
   - "Search for the movie `Stephen Hawking's Universe` in the `movies` collection under the `sample_mflix` database."
   - "Once you find the movie, you'll see the `year` field has the letter `e` in it, which is wrong."
+  - "Did you change the `year` to the correct type?"
   - "There are different ways to update the data: the Atlas UI, the mongo shell, or the mongo API."
 
 startFlow:
@@ -14,13 +15,15 @@ startFlow:
         person: lucca
         messages:
           - text: "Oh no, I think some of the data is corrupted!"
-          - text: "I was told that the `Stephen Hawking's Universe` series is missing from our app, because its `year` field is malformed and has a wrong type"
-          - text: ":instruction[Tell me when it is fixed]"
+          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue, because its `year` field is malformed and has a wrong type"
+          - text: ":instruction[Let me know once the issue is resolved]"
+    - actionId: ready_message
+      params:
+        person: lucca
+
 
 trigger:
-  type: user_message
-  params:
-    person: lucca
+  type: user_ready_response
   flowNode:
     do:
     - actionId: mongo_query_find
@@ -31,7 +34,7 @@ trigger:
         uri: "${user.integrations.mongoAtlas.connectionString}"
         query:
           title: "Stephen Hawking's Universe"
-          
+
     if:
       conditions:
       - conditionId: is_truthy
@@ -43,7 +46,7 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: Nice job! I can see the `year` is updated to 2010 now, this will make sure our data is presented correctly. 
+            - text: Nice job! I can see the `year` is updated to 2010 now, this will make sure our data is presented correctly.
         - actionId: finish_step
       else:
         do:
@@ -51,5 +54,5 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: I don't think you fixed it yet. Are you sure the `year` field was update to `2010` with type `int32`?
+            - text: I see the issue is still exists. Are you sure you fixed it?
 
