@@ -14,7 +14,8 @@ startFlow:
           - text: First up, let's create a MongoDB Atlas account so we can create our first Atlas cluster.
           - text: Sign up to Atlas at https://www.mongodb.com/atlas/database and complete the email verification.
           - text: Next you'll be asked to choose the pricing tier, be sure to choose the free tier, named `M0`.
-          - text: Lastly, choose any cloud provider you'd like, and tell me when you are finished.
+          - text: Lastly, choose a name for your cluster and any cloud provider and region you'd like.
+          - text: Tell me when you're done, that's when you're directed to the Atlas dashboard.
 
     - actionId: ready_message
       params:

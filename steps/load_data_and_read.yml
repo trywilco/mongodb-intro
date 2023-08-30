@@ -4,6 +4,7 @@ learningObjectives:
 hints:
   - "The structure of a mongo query is: `{field: value}`"
   - The field of the movie title is `title` and the value is `The Shawshank Redemption`
+  - "You can run a query using the UI. Head over to the relevant collection and type the query in the input box".
 
 startFlow:
   do:
@@ -15,7 +16,8 @@ startFlow:
           - text: "Go over to `Deployment -> Database` and click on `Load Sample Data`. This will take a few minutes." 
           - text: "Once the data is loaded, click on `Browse Collections`"
           - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
-          - text: "We are ready to run our first query! :instruction[Can you tell me in what year the movie `The Shawshank Redemption` was released?]"
+          - text: "We are ready to run our first query!. This can be done using the UI, mongo shell or any other MongoDB client."
+          - text: ":instruction[Can you tell me in what year the movie title `The Shawshank Redemption` was released?]"
 
 trigger:
   type: user_message
