@@ -8,12 +8,13 @@ hints:
 
 startFlow:
   do:
-   - actionId: mongo_insert_many
+    - actionId: mongo_insert_many
       params:
         databaseName: sample_mflix
         collectionName: movies
         uri: "${user.integrations.mongoAtlas.connectionString}"
         resourceUrl: "https://res.cloudinary.com/wilco/raw/upload/v1693719916/wilco-assets/quests/intro_mongodb_atlas/movies_mini_g3m9tg.json"
+
     - actionId: bot_message
       params:
         person: lucca
