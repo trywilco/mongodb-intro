@@ -23,7 +23,7 @@ startFlow:
         databaseName: sample_mflix
         collectionName: movies
         uri: "${user.integrations.mongoAtlas.connectionString}"
-        resourceUrl: "https://raw.githubusercontent.com/trywilco/mongodb-intro/main/assets/movies.json"
+        resourceUrl: "assets/movies.json"
 
 
 trigger:
