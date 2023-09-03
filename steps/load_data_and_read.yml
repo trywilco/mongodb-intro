@@ -13,7 +13,7 @@ startFlow:
         databaseName: sample_mflix
         collectionName: movies
         uri: "${user.integrations.mongoAtlas.connectionString}"
-        resourceUrl: "https://res.cloudinary.com/wilco/raw/upload/v1693724321/wilco-assets/quests/intro_mongodb_atlas/movies_mini2_bbl7vi.json"
+        resourceUrl: "https://raw.githubusercontent.com/trywilco/mongodb-intro/auto-write-data/assets/movies.json"
 
     - actionId: bot_message
       params:
