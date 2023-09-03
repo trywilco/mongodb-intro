@@ -8,13 +8,6 @@ hints:
 
 startFlow:
   do:
-    - actionId: mongo_insert_many
-      params:
-        databaseName: sample_mflix
-        collectionName: movies
-        uri: "${user.integrations.mongoAtlas.connectionString}"
-        resourceUrl: "https://raw.githubusercontent.com/trywilco/mongodb-intro/auto-write-data/assets/movies.json"
-
     - actionId: bot_message
       params:
         person: lucca
@@ -24,6 +17,14 @@ startFlow:
           - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
           - text: "We are ready to run our first query! This can also be done using the UI, mongo shell or any other MongoDB client."
           - text: ":instruction[Can you tell me in what year the movie title `The Shawshank Redemption` was released?]"
+
+    - actionId: mongo_insert_many
+      params:
+        databaseName: sample_mflix
+        collectionName: movies
+        uri: "${user.integrations.mongoAtlas.connectionString}"
+        resourceUrl: "https://raw.githubusercontent.com/trywilco/mongodb-intro/auto-write-data/assets/movies.json"
+
 
 trigger:
   type: user_message
