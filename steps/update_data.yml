@@ -31,7 +31,7 @@ trigger:
       params:
         databaseName: sample_mflix
         collectionName: movies
-        uri: "${user.integrations.mongoAtlas.connectionString}"
+        uri: "${user.integrations.mongo.connectionString}"
         query:
           title: "Stephen Hawking's Universe"
 

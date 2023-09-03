@@ -38,7 +38,7 @@ trigger:
         do:
         - actionId: user_set_integration_property
           params:
-            integration: mongoAtlas
+            integration: mongo
             key: connectionString
             value: ${userMessageText}
 
