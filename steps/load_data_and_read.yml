@@ -12,12 +12,19 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Now, we should load some data into our database."
-          - text: "Go over to `Deployment -> Database` and click on `Load Sample Data`. This will take a few minutes." 
-          - text: "Once the data is loaded, click on `Browse Collections`"
+          - text: "Great news! We've loaded some data into the cluster. Let's see if we can read it."
+          - text: "Go over to `Deployment -> Database`, you should see the cluster you created. The data can be viewed using the UI (click on `Browse Collections`), mongo shell or any other MongoDB client." 
           - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
-          - text: "We are ready to run our first query! This can be done using the UI, mongo shell or any other MongoDB client."
+          - text: "We are ready to run our first query! This can also be done using the UI, mongo shell or any other MongoDB client."
           - text: ":instruction[Can you tell me in what year the movie title `The Shawshank Redemption` was released?]"
+
+    - actionId: mongo_insert_many
+      params:
+        databaseName: sample_mflix
+        collectionName: movies
+        uri: "${user.integrations.mongoAtlas.connectionString}"
+        resourceUrl: "https://raw.githubusercontent.com/trywilco/mongodb-intro/auto-write-data/assets/movies.json"
+
 
 trigger:
   type: user_message
