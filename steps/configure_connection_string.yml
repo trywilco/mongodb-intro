@@ -29,15 +29,6 @@ trigger:
           text: "${userMessageText}"
           regex: "^mongodb"
 
-      - conditionId: text_contains_strings
-        name: template_check
-        equals: false
-        params:
-          text: "${userMessageText}"
-          strings:
-          - <username>
-          - <password>
-
       - conditionId: database_check_connection_url
         params:
           type: mongodb
