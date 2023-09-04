@@ -12,7 +12,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Great news! We've loaded some data into the cluster. Let's see if we can read it."
+          - text: "Great news! I've loaded some data into the cluster. Let's see if we can read it."
           - text: "Go over to `Deployment -> Database`, you should see the cluster you created. The data can be viewed using the UI (click on `Browse Collections`), mongo shell or any other MongoDB client." 
           - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
           - text: "We are ready to run our first query! This can also be done using the UI, mongo shell or any other MongoDB client."
