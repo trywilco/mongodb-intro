@@ -13,7 +13,7 @@ startFlow:
         messages:
           - text: We should configure a `connection string` for the MongoDB Atlas cluster, so we can connect to it from our application.
           - text: Go to `Security -> Quick start`, :instruction[choose a username and password that will be used in the connection string. **Save the password**, as we will need it soon].
-          - text: Next, you should allow access to our app. This is for me to verify you’ve made all the changes that will be required. :instruction[Add the IP `34.192.30.0/20` in the `IP Access List` under `My Local Environment` at the bottom of the page].
+          - text: Next, you should allow access to our app. This is for me to verify you’ve made all the changes that will be required. :instruction[Add the IP `34.192.00.0/16` in the `IP Access List` under `My Local Environment` at the bottom of the page].
           - text: Lastly, go to `Deployment -> Database` tab. There, next to the cluster name, click on `connect` then `Drivers`. Copy the `connection string` format and fill the correct username and password in the placeholders.
           - text: :instruction[Copy the `connection string` and paste it here]
           
