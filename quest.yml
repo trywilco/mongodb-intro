@@ -25,3 +25,5 @@ level: intermediate
 type: custom
 duration: 1.5
 repository: null
+resources:
+  - name: mongo
