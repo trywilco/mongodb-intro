@@ -14,7 +14,7 @@ startFlow:
         messages:
           - text: Good job on creating the cluster!
           - text: Now, we need to create an API key to connect to the cluster.
-          - text: In the left hand menu, click on `Services -> Data API`. Then click on `Users` tab and `Create API Key`.
+          - text: In the left-hand menu, click on `Services -> Data API`. Then click on the `Users` tab and `Create API Key`.
           - text: Give the API key a name and click `Create`.
           - text: Copy the key and paste it here.
     - actionId: ready_message
