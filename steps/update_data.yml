@@ -67,6 +67,6 @@ solution:
         person: lucca
         messages:
           - text: "We can start with searching for the specific document. Using the UI, look for the releveant collection under the `Deployment -> Databse` section." 
-          - text: "In the query input text box run the query: `{title: \"Stephen Hawking's Universe\"}". Make sure it returns a signle document.
+          - text: "In the query input text box run the query: `{title: \"Stephen Hawking's Universe\"}. Make sure it returns a signle document."
           - text: "Now, let's fix the malformed data by changing the `year` type to `Int32` and making sure the value is `2010`"
           - text: "Click on `Update` to save the changes."
