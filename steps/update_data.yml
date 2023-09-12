@@ -15,7 +15,7 @@ startFlow:
         person: lucca
         messages:
           - text: "Oh no, I think some of the data is corrupted!"
-          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue, because its `year` field is malformed and has a wrong type"
+          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue, because its `year` field is malformed and has a wrong type. It is a year but should be an `Int32`."
           - text: ":instruction[Let me know once the issue is resolved]"
     - actionId: ready_message
       params:
@@ -59,3 +59,14 @@ trigger:
           params:
             person: lucca
 
+
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "We can start with searching for the specific document. Using the UI, look for the releveant collection under the `Deployment -> Databse` section." 
+          - text: "In the query input text box run the query: `{title: \"Stephen Hawking's Universe\"}. Make sure it returns a signle document."
+          - text: "Now, let's fix the malformed data by changing the `year` type to `Int32` and making sure the value is `2010`"
+          - text: "Click on `Update` to save the changes."

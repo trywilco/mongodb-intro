@@ -1,5 +1,5 @@
 id: intro_mongodb_atlas
-title: Introduction to MongoDB Atlas
+title: Getting Started with MongoDB Atlas
 subtitle: "Level up your skills: Create, Query and Update a MongoDB Atlas Cluster"
 description: In this quest, you'll learn the basics of MongoDB Atlas, a fully
   managed database-as-a-service for MongoDB. You'll create a new cluster,
