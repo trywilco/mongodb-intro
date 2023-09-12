@@ -10,7 +10,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: We are going to learn today about MongoDB Atlas, a managed Database as a Service (DBaaS) from the makers of MongoDB.
+          - text: Today we are going to learn about MongoDB Atlas, a multi-cloud database service by the same people that build MongoDB. Atlas simplifies deploying and managing your databases while offering the versatility you need to build resilient and performant global applications on the cloud providers of your choice.
           - text: First up, let's create a MongoDB Atlas account so we can create our first Atlas cluster.
           - text: Sign up to Atlas at https://www.mongodb.com/cloud/atlas/register and complete the email verification.
           - text: Next you'll be asked to choose the pricing tier, be sure to choose the free tier, named `M0`.
