@@ -6,7 +6,7 @@ hints:
   - "Search for the movie `Stephen Hawking's Universe` in the `movies` collection under the `sample_mflix` database."
   - "Once you find the movie, you'll see the `year` field has the letter `e` in it, which is wrong."
   - "Did you change the `year` to the correct type?"
-  - "There are different ways to update the data: the Atlas UI, the mongo shell, or the mongo API."
+  - "There are different ways to update the data: the Atlas UI, the MongoDB Compass, or the Mongo API."
 
 startFlow:
   do:
@@ -15,7 +15,7 @@ startFlow:
         person: lucca
         messages:
           - text: "Oh no, I think some of the data is corrupted!"
-          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue, because its `year` field is malformed and has a wrong type. It is a year but should be an `Int32`."
+          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue because its `year` field is malformed and has a wrong type. It is a year but should be an `Int32`."
           - text: ":instruction[Let me know once the issue is resolved]"
     - actionId: ready_message
       params:
@@ -54,7 +54,7 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: I see the issue is still exists. Are you sure you fixed it? let's try again.
+            - text: I see the issue still exists. Are you sure you fixed it? let's try again.
         - actionId: ready_message
           params:
             person: lucca
@@ -66,7 +66,7 @@ solution:
       params:
         person: lucca
         messages:
-          - text: "We can start with searching for the specific document. Using the UI, look for the releveant collection under the `Deployment -> Databse` section." 
-          - text: "In the query input text box run the query: `{title: \"Stephen Hawking's Universe\"}. Make sure it returns a signle document."
+          - text: "We can start with searching for the specific document. Using the UI, look for the relevant collection under the `Deployment -> Databse` section." 
+          - text: "In the query input text box run the query: `{title: \"Stephen Hawking's Universe\"}`. Make sure it returns the correct document."
           - text: "Now, let's fix the malformed data by changing the `year` type to `Int32` and making sure the value is `2010`"
           - text: "Click on `Update` to save the changes."
