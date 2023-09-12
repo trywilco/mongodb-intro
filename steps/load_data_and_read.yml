@@ -15,7 +15,7 @@ startFlow:
           - text: "Great news! I've loaded some data into the cluster, it might take a minute or two to load. Let's see if we can find it."
           - text: "Go over to `Deployment -> Database`, you should see the cluster you've created. The data can be viewed using the UI (click on `Browse Collections`), the MongoDB Shell, MongoDB Compass, or any other MongoDB client." 
           - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
-          - text: "We are ready to run our first query! This can also be done using the UI, mongo shell or any other MongoDB client."
+          - text: "We are ready to run our first query! This can also be done using the UI, MongoDB shell, or any other MongoDB client."
           - text: ":instruction[Can you tell me in what year the movie title `The Shawshank Redemption` was released?]"
 
     - actionId: mongo_insert_many
