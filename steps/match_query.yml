@@ -1,0 +1,50 @@
+id: match_query
+learningObjectives:
+  - Learn how to run a query with numeric values
+hints:
+  - Pay attention to the relevant field that counts the comments - `num_mflix_comments`
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: How many movies have exactly 3 comments?"
+
+trigger:
+  type: user_message
+  params:
+    person: lucca
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          - "5"
+
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's right!"
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's not correct, try again!"
+
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+        - text: "Fortunately, we have a field that counts the comments, so we can use it to filter the movies that have exactly 3 comments. We can do that by adding a filter to the query `{num_mflix_comments: 3}`."
