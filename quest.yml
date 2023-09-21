@@ -19,7 +19,9 @@ steps:
   - create_mongo_atlas_cluster
   - configure_connection_string
   - load_data_and_read
+  - find_and_sort
   - update_data
+  - search_array
 
 level: intermediate
 type: custom

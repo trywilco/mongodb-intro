@@ -1,0 +1,45 @@
+id: search_array
+learningObjectives:
+  - Learn how to run a query on fields of type array
+hints:
+  - "Pay attention that ehe directors field is an array of strings"
+  - "You can use the `in` operator to search for a value in the array."
+
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Can you please find out how many movies in our database masterfully directed by the renowned filmmaker, `Frank Darabont`."
+
+trigger:
+  type: user_message
+  params:
+    person: lucca
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          - "1"
+
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's correct! Frank Darabont directed 1 movie in our database."
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's not correct, try again!"
+

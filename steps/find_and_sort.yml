@@ -1,0 +1,54 @@
+id: find_and_sort
+learningObjectives:
+  - Learn how to use find and sort in a query
+hints:
+  - "You can use the `sort` option in the Atlas UI action to sort the results by the `year` field in ascending order."
+  - "Ascending order means that the oldest movie will be first, this is done by sorting the relevant field with `{field: 1}`."
+
+
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "Find the longest `runtime` movie in our cinematic database, released in the memorable year of 1956."
+          - text: "Once you've located this cinematic gem, :instruction[what is its `title`?]"
+
+trigger:
+  type: user_message
+  params:
+    person: lucca
+  flowNode:
+    if:
+      conditions:
+      - conditionId: text_contains_strings
+        params:
+          text: "${userMessageText}"
+          strings:
+          - "Giant"
+
+      then:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's spot on!"
+        - actionId: finish_step
+      else:
+        do:
+        - actionId: bot_message
+          params:
+            person: lucca
+            messages:
+            - text: "That's not correct, try again!"
+
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "We can use both sort and filter on a single query. To sort our query using the Atlas UI."
+          - text: "Let's start by filtering the movies from the year 1956. We can do that by adding a filter to the query `{year: 1956}`. To sort our query, we'll use the `Sort` option with `{runtime: -1}`. This will return the longest movie first. "

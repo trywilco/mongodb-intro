@@ -11,13 +11,21 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: We should configure a `connection string` for the MongoDB Atlas cluster, so we can connect to it from our application.
-          - text: Go to `Security -> Quick start`, :instruction[choose a username and password that will be used in the connection string. **Save the password**, as we will need it soon].
-          - text: Next, you should allow access to our app. This is for me to verify you’ve made all the changes that will be required. :instruction[Add the IP `34.192.0.0/16` in the `IP Access List` under `My Local Environment` at the bottom of the page].
-          - text: Lastly, go to the `Deployment -> Database` tab. There, next to the cluster name, click on `connect` then `Drivers`. Copy the `connection string` format and fill in the correct username and password in the placeholders.
-          - text: :instruction[Copy the `connection string` and paste it here]
-          
+          - text: If you're all set, the spotlight's on you.
+          - text: You’ve set the stage with your first MongoDB Atlas cluster.
+          - text: Now, let's orchestrate the next pivotal scene in our film.
+          - text: To do this, we'll need the one and only `connection string` that provides the needed access to our entire multiverse.
+          - text: To win the Connection String, make your way to the film vault, labeled as `Security > Quick start`.
+          - text: You'll assign a unique username and a secret code – think of it as casting your lead roles. Remember to save these credentials for later.
+          - text: To ensure your storyline is accessible to your exclusive audience, you need to manage access carefully.
+          - text: Add the IP `34.192.0.0/16` on the `IP Access List`, right under the section named `My Local Environment`. It’s like setting up the best camera angles to capture every moment. Adding this IP mask will let us access the DB from other machines (like your user, or the production computer).
+          - text: Now, for the chase!
+          - text: Head to `Deployment > Database` stage.
+          - text: Spot our film cluster, and click on the `Connect` button.
+          - text: Following this, you'll find `Drivers`.
+          - text: ":instruction[Copy the `connection string` and paste it here.]"
 
+          
 trigger:
   type: user_message
   flowNode:
