@@ -26,6 +26,7 @@ trigger:
           text: "${userMessageText}"
           strings:
           - "1"
+          - "one"
 
       then:
         do:
