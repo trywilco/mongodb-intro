@@ -16,9 +16,9 @@ startFlow:
           - text: Now, let's orchestrate the next pivotal scene in our film.
           - text: To do this, we'll need the one and only `connection string` that provides the needed access to our entire multiverse.
           - text: To win the Connection String, make your way to the film vault, labeled as `Security > Quick start`.
-          - text: You'll assign a unique username and a secret code – think of it as casting your lead roles.
+          - text: You'll assign a unique username and a secret code – think of it as casting your lead roles. Remember to save these credentials for later.
           - text: To ensure your storyline is accessible to your exclusive audience, you need to manage access carefully.
-          - text: Add the IP `0.0.0.0` on the `IP Access List`, right under the section named `My Local Environment`. It’s like setting up the best camera angles to capture every moment. Adding this IP mask will let us access the DB from other machines (like your user, or the production computer).
+          - text: Add the IP `34.192.0.0/16` on the `IP Access List`, right under the section named `My Local Environment`. It’s like setting up the best camera angles to capture every moment. Adding this IP mask will let us access the DB from other machines (like your user, or the production computer).
           - text: Now, for the chase!
           - text: Head to `Deployment > Database` stage.
           - text: Spot our film cluster, and click on the `Connect` button.
