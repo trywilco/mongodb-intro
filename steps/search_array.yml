@@ -12,7 +12,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: How many movies in the database are directed by `Frank Darabont`?"
+          - text: "Can you please find out how many movies in our database masterfully directed by the renowned filmmaker, `Frank Darabont`."
 
 trigger:
   type: user_message
@@ -33,7 +33,7 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: "That's correct!"
+            - text: "That's correct! Frank Darabont directed 1 movie in our database."
         - actionId: finish_step
       else:
         do:

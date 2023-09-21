@@ -10,12 +10,18 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: Today we are going to learn about MongoDB Atlas, a multi-cloud database service by the same people that build MongoDB. Atlas simplifies deploying and managing your databases while offering the versatility you need to build resilient and performant global applications on the cloud providers of your choice.
-          - text: First up, let's create a MongoDB Atlas account so we can create our first Atlas cluster.
-          - text: Sign up to Atlas at https://www.mongodb.com/cloud/atlas/register and complete the email verification.
-          - text: Next you'll be asked to choose the pricing tier, be sure to choose the free tier, named `M0`.
-          - text: Lastly, choose a name for your cluster and any cloud provider and region you'd like.
-          - text: Tell me when you're done, that's when you're directed to the Atlas dashboard.
+          - text: Welcome to the set of Techtropolis Films.
+          - text: At the heart of our universe is MongoDB Atlas, the central reel containing every storyline ever crafted.
+          - text: But we've hit a production snag.
+          - text: The universe's cinematic harmony is at stake, and only by saving our movie database can we restore balance!
+          - text: Ready for your opening scene?
+          - text: Visit the producer's lounge at https://www.mongodb.com/cloud/atlas/register to start.
+          - text: As the director, you'll be presented with a choice of pricing tiers.
+          - text: For your debut, choose the `M0` tier – the free tier (to ensure our production doesn't run over budget).
+          - text: Next, choose a title for your first movie cluster.
+          - text: And while you're in the director's chair, pick your preferred cloud provider and region.
+          - text: Once you see your Atlas dashboard, we’ll be ready for action.
+          - text: Ready for your close-up?
 
     - actionId: ready_message
       params:

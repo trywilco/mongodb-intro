@@ -3,7 +3,7 @@ learningObjectives:
   - Update data in MongoDB
 
 hints:
-  - "Search for the movie `Stephen Hawking's Universe` in the `movies` collection under the `sample_mflix` database."
+  - "Remember, under the studio `sample_mflix`, in the `Movies` collection, lies our distorted reel, [Stephen Hawking’s Universe]. "
   - "Once you find the movie, you'll see the `year` field has the letter `e` in it, which is wrong."
   - "Did you change the `year` to the correct type?"
   - "There are different ways to update the data: the Atlas UI, the MongoDB Compass, or the Mongo API."
@@ -14,9 +14,12 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Oh no, I think some of the data is corrupted!"
-          - text: "I was told that the `Stephen Hawking's Universe` movie has an issue because its `year` field is malformed and has a wrong type. It is a year but should be an `Int32`."
-          - text: ":instruction[Let me know once the issue is resolved]"
+          - text: But wait, we're facing a film glitch, our data is corrupted!
+          - text: Our movie, `Stephen Hawking’s Universe`, seems to have a film tear.
+          - text: The `year` tag on the reel is mislabeled.
+          - text: Repair the reel and ensure the film plays seamlessly.
+          - text: Ready for the restoration challenge?
+
     - actionId: ready_message
       params:
         person: lucca
@@ -46,7 +49,7 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: Nice job! I can see the `year` is updated to 2010 now, this will make sure our data is presented correctly.
+            - text: "Splendid! I've reviewed the reel, and the `year` now correctly showcases 2010. You’ve saved the cinematic universe. For now"
         - actionId: finish_step
       else:
         do:

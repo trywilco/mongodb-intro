@@ -2,8 +2,8 @@ id: load_data_and_read
 learningObjectives:
   - Load and read data
 hints:
+  - Don't get lost in the plot! Check under the film title, [title], and look for our gem, [The Shawshank Redemption].`
   - "The structure of a mongo query is: `{field: value}`"
-  - The field of the movie title is `title` and the value is `The Shawshank Redemption`
   - "You can run a query using the UI. Head over to the relevant collection and type the query in the input box"
 
 startFlow:
@@ -12,11 +12,19 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Great news! I've loaded some data into the cluster, it might take a minute or two to load. Let's see if we can find it."
-          - text: "Go over to `Deployment -> Database`, you should see the cluster you've created. The data can be viewed using the UI (click on `Browse Collections`), the MongoDB Shell, MongoDB Compass, or any other MongoDB client." 
-          - text: "You should see a collection named  database called `sample_mflix` open the `movies` collection."
-          - text: "We are ready to run our first query! This can also be done using the UI, MongoDB shell, or any other MongoDB client."
-          - text: ":instruction[Can you tell me in what year the movie title `The Shawshank Redemption` was released?]"
+          - text: Ah, an epic string!
+          - text: But hold your applause.
+          - text: Our next act calls for enriching our database.
+          - text: Head over to `Deployment>Database` and search for `Load Sample Data`.
+          - text: This might take a few beats.
+          - text: Once the reels are rolling, let's inspect the master cut.
+          - text: Head to `Browse Collections` and look for the movie library `Sample_mflix`, presenting a plethora of tales.
+          - text: Dive into the `Movies` section.
+          - text: You’re ready to run your first query!
+          - text: "First, choose your method: our UI, the Mongo shell, or an alternate MongoDB client."
+          - text: "The challenge? Discover the release year of the classic movie: `The Shawshank Redemption`."
+          - text: Query the database.
+          - text: ":instruction[Then come back here and enter the year.]"
 
     - actionId: mongo_insert_many
       params:
@@ -45,8 +53,8 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: "That's right! The Shawshank Redemption was released in 1994. What a time to be alive!"
-              delay: 1300
+            - text: "Bravo! A year when the silver screen shone bright with 'The Shawshank Redemption'."
+
         - actionId: finish_step
       else:
         do:
@@ -54,6 +62,5 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: "That's not correct, try again!"
-              delay: 500
+            - text: "Cut! That's not in the script. Another take?"
 
