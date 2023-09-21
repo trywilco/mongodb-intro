@@ -64,3 +64,13 @@ trigger:
             messages:
             - text: "Cut! That's not in the script. Another take?"
 
+
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "We can start with searching for the specific document. Using the UI, look for the relevant collection under the `Deployment -> Database` section."
+          - text: "Once you've found the collection, you can search for the movie by typing the title in the search box. The title field is called `title`."
+          - text: "The structure of a mongo query is: `{field: value}`. In our case, `{title: "The Shawshank Redemption"}`
