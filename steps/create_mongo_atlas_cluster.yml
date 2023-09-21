@@ -21,6 +21,10 @@ startFlow:
           - text: Next, choose a title for your first movie cluster.
           - text: And while you're in the director's chair, pick your preferred cloud provider and region.
           - text: Once you see your Atlas dashboard, we’ll be ready for action.
+<<<<<<< HEAD
+=======
+          - text: Ready for your close-up?
+>>>>>>> main
 
     - actionId: ready_message
       params:
