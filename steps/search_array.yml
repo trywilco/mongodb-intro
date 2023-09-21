@@ -43,3 +43,11 @@ trigger:
             messages:
             - text: "That's not correct, try again!"
 
+
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: "The `Director` field is of type array. This means we will need to use the `in` operator to search for a value in the array. We can do that by adding a filter to the query `{directors: {$in: ['Frank Darabont']} }`. This will return all the movies that have Frank Darabont as one of the directors."
