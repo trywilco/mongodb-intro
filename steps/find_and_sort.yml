@@ -2,13 +2,9 @@ id: find_and_sort
 learningObjectives:
   - Learn how to use find and sort in a query
 hints:
-<<<<<<< HEAD
   - "You can use the `sort` option in the Atlas UI action to sort the results by the `runtime` field in descending order."
   - "Descending order means that the longest `runtime` movie will be first, this is done by sorting the relevant field with `{field: -1}`."
-=======
-  - "You can use the `sort` option in the Atlas UI action to sort the results by the `year` field in ascending order."
-  - "Ascending order means that the oldest movie will be first, this is done by sorting the relevant field with `{field: 1}`."
->>>>>>> main
+
 
 
 startFlow:
