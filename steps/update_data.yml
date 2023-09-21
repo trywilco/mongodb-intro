@@ -15,10 +15,9 @@ startFlow:
         person: lucca
         messages:
           - text: But wait, we're facing a film glitch, our data is corrupted!
-          - text: Our movie, `Stephen Hawking’s Universe`, seems to have a film tear.
+          - text: Our movie, `Stephen Hawking's Universe`, seems to have a film tear.
           - text: The `year` tag on the reel is mislabeled.
           - text: Repair the reel and ensure the film plays seamlessly.
-          - text: Ready for the restoration challenge?
 
     - actionId: ready_message
       params:
