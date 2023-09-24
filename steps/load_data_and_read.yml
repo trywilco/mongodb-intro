@@ -14,9 +14,7 @@ startFlow:
         messages:
           - text: Ah, an epic string!
           - text: But hold your applause.
-          - text: Our next act calls for enriching our database.
-          - text: Head over to `Deployment>Database` and search for `Load Sample Data`.
-          - text: This might take a few beats.
+          - text: Our next act calls for enriching our database (this might take a few beats).
           - text: Once the reels are rolling, let's inspect the master cut.
           - text: Head to `Browse Collections` and look for the movie library `Sample_mflix`, presenting a plethora of tales.
           - text: Dive into the `Movies` section.
