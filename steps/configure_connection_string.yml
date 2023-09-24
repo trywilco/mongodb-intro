@@ -20,7 +20,7 @@ startFlow:
           - text: To ensure your storyline is accessible to your exclusive audience, you need to manage access carefully.
           - text: Add the IP `34.192.0.0/16` on the `IP Access List`, right under the section named `My Local Environment`. It’s like setting up the best camera angles to capture every moment. Adding this IP mask will let us access the DB from other machines (like your user, or the production computer).
           - text: Now, for the chase!
-          - text: Head over to `Deployment > Database`, click the three dots to the right of `Browse Collections`, and then click `Load Sample Data`.
+          - text: Head over to `Deployment > Database`.
           - text: Spot our film cluster, and click on the `Connect` button.
           - text: Following this, you'll find `MongoDB for VS Code`.
           - text: ":instruction[Copy the `connection string` and paste it here.] Make sure that you update the connection string with the username and password you created earlier."
