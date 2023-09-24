@@ -22,6 +22,7 @@ startFlow:
           - text: Dive into the `Movies` section.
           - text: You’re ready to run your first query!
           - text: "First, choose your method: our UI, the Mongo shell, or an alternate MongoDB client."
+          - text: "If you want to stay in the Atlas UI, go to `Deployment > Database > Browse Collections`"
           - text: "The challenge? Discover the release year of the classic movie: `The Shawshank Redemption`."
           - text: Query the database.
           - text: ":instruction[Then come back here and enter the year.]"
