@@ -17,7 +17,7 @@ startFlow:
           - text: Ready for your opening scene?
           - text: Visit the producer's lounge at https://www.mongodb.com/cloud/atlas/register to start.
           - text: As the director, you'll be presented with a choice of pricing tiers.
-          - text: For your debut, choose the `M0` tier – the free tier (to ensure our production doesn't run over budget).
+          - text: For your debut, choose the `Shared Category`, the right geographic region for you, and the `Cluster Tier` of `M0` – the free tier (to ensure our production doesn't run over budget).
           - text: Next, choose a title for your first movie cluster.
           - text: And while you're in the director's chair, pick your preferred cloud provider and region.
           - text: Once you see your Atlas dashboard, we’ll be ready for action.
