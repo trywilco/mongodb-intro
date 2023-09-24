@@ -18,7 +18,7 @@ startFlow:
           - text: Head over to `Deployment>Database` and search for `Load Sample Data`.
           - text: This might take a few beats.
           - text: Once the reels are rolling, let's inspect the master cut.
-          - text: Head to `Browse Collections` and look for the movie library `Sample_mflix`, presenting a plethora of tales.
+          - text: Head to `Browse Collections` and look for the movie library `anythink`, presenting a plethora of tales.
           - text: Dive into the `Movies` section.
           - text: You’re ready to run your first query!
           - text: "First, choose your method: our UI, the Mongo shell, or an alternate MongoDB client."
@@ -27,9 +27,16 @@ startFlow:
           - text: Query the database.
           - text: ":instruction[Then come back here and enter the year.]"
 
+    - actionId: mongo_delete_many
+      params:
+        databaseName: anythink
+        collectionName: movies
+        uri: "${user.integrations.mongo.connectionString}"
+
+
     - actionId: mongo_insert_many
       params:
-        databaseName: sample_mflix
+        databaseName: anythink
         collectionName: movies
         uri: "${user.integrations.mongo.connectionString}"
         resourcePath: "assets/movies.json"
