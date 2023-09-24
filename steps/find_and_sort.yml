@@ -13,7 +13,7 @@ startFlow:
       params:
         person: lucca
         messages:
-          - text: "Find the longest `runtime` movie in our cinematic database, released in the memorable year of 1956."
+          - text: "Find the movie with the longest `runtime` released in the memorable `year` of 1956."
           - text: "Once you've located this cinematic gem, :instruction[what is its `title`?]"
 
 trigger:
