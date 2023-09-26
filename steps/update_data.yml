@@ -3,7 +3,7 @@ learningObjectives:
   - Update data in MongoDB
 
 hints:
-  - "Remember, under the studio `sample_mflix`, in the `Movies` collection, lies our distorted reel, [Stephen Hawking’s Universe]. "
+  - "Remember, under the studio `moviesquest`, in the `reels` collection, lies our distorted reel, [Stephen Hawking’s Universe]. "
   - "Once you find the movie, you'll see the `year` field has the letter `e` in it, which is wrong."
   - "Did you change the `year` to the correct type?"
   - "There are different ways to update the data: the Atlas UI, the MongoDB Compass, or the Mongo API."
@@ -31,8 +31,8 @@ trigger:
     - actionId: mongo_query_find
       name: mongo_find_result
       params:
-        databaseName: sample_mflix
-        collectionName: movies
+        databaseName: moviesquest
+        collectionName: reels
         uri: "${user.integrations.mongo.connectionString}"
         query:
           title: "Stephen Hawking's Universe"
