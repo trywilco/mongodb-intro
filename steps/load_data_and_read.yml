@@ -16,8 +16,8 @@ startFlow:
           - text: But hold your applause.
           - text: Our next act calls for enriching our database (this might take a few beats).
           - text: Once the reels are rolling, let's inspect the master cut.
-          - text: Head to `Browse Collections` and look for the movie library `Sample_mflix`, presenting a plethora of tales.
-          - text: Dive into the `Movies` section.
+          - text: Head to `Browse Collections` and look for the movie library `moviesquest`, presenting a plethora of tales.
+          - text: Dive into the `reel` section.
           - text: You’re ready to run your first query!
           - text: "First, choose your method: our UI, the Mongo shell, or an alternate MongoDB client."
           - text: "If you want to stay in the Atlas UI, go to `Deployment > Database > Browse Collections`"
@@ -26,8 +26,8 @@ startFlow:
 
     - actionId: mongo_insert_many
       params:
-        databaseName: sample_mflix
-        collectionName: movies
+        databaseName: moviesquest
+        collectionName: reel
         uri: "${user.integrations.mongo.connectionString}"
         resourcePath: "assets/movies.json"
         dropCollection: true
