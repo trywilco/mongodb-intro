@@ -34,7 +34,9 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: "That's correct! Frank Darabont directed one movie in our database."
+            - text: That's correct! Frank Darabont directed one movie in our database
+            - text: Wait, it looks like there’s a breakdown in the production! 
+            - text: The film world needs your help again! Continue on with the next step in your journey...
         - actionId: finish_step
       else:
         do:
