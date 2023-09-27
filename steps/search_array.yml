@@ -2,7 +2,7 @@ id: search_array
 learningObjectives:
   - Learn how to run a query on fields of type array
 hints:
-  - "Pay attention that ehe directors field is an array of strings"
+  - "Pay attention that the directors field is an array of strings"
   - "You can use the `in` operator to search for a value in the array."
 
 
