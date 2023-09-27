@@ -22,7 +22,6 @@ startFlow:
           - text: Dive into the `reels` section.
           - text: You’re ready to run your first query! The challenge? Discover the release year of the classic movie: The Shawshank Redemption.
           - text: ":instruction[Then come back here and enter the year.]"
-
     - actionId: mongo_insert_many
       params:
         databaseName: moviesquest
