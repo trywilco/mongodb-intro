@@ -12,16 +12,16 @@ startFlow:
       params:
         person: lucca
         messages:
-        - text: Ah, an epic string!
-        - text: But hold your applause.
-        - text: Our next act calls for enriching our database (this might take a few beats).
-        - text: Once the reels are rolling, let's inspect the master cut.
-        - text: First, choose your method: the Atlas UI, the MongoDB Shell, or an alternate MongoDB client.
-        - text: If you want to stay in the Atlas UI, go to `Deployment > Database > Browse Collections`
-        - text: Once you’re there, look for the  `moviesquest` library, presenting a plethora of tales.
-        - text: Dive into the `reels` section.
-        - text: You’re ready to run your first query! The challenge? Discover the release year of the classic movie: The Shawshank Redemption.
-        - text: ":instruction[Then come back here and enter the year.]"
+          - text: Ah, an epic string!
+          - text: But hold your applause.
+          - text: Our next act calls for enriching our database (this might take a few beats).
+          - text: Once the reels are rolling, let's inspect the master cut.
+          - text: "First, choose your method: the Atlas UI, the MongoDB Shell, or an alternate MongoDB client."
+          - text: If you want to stay in the Atlas UI, go to `Deployment > Database > Browse Collections`
+          - text: "Once you're there, look for the  `moviesquest` library, presenting a plethora of tales."
+          - text: Dive into the `reels` section.
+          - text: "You're ready to run your first query! The challenge? Discover the release year of the classic movie: The Shawshank Redemption."
+          - text: ":instruction[Then come back here and enter the year.]"
     - actionId: mongo_insert_many
       params:
         databaseName: moviesquest
