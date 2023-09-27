@@ -2,7 +2,7 @@ id: search_array
 learningObjectives:
   - Learn how to run a query on fields of type array
 hints:
-  - "Pay attention that ehe directors field is an array of strings"
+  - "Pay attention that the directors field is an array of strings"
   - "You can use the `in` operator to search for a value in the array."
 
 
@@ -34,7 +34,9 @@ trigger:
           params:
             person: lucca
             messages:
-            - text: "That's correct! Frank Darabont directed one movie in our database."
+            - text: That's correct! Frank Darabont directed one movie in our database
+            - text: Wait, it looks like there’s a breakdown in the production! 
+            - text: The film world needs your help again! Continue on with the next step in your journey...
         - actionId: finish_step
       else:
         do:
