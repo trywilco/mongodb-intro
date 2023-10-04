@@ -36,16 +36,14 @@ trigger:
   flowNode:
     if:
       conditions:
-      - conditionId: text_match_regex
-        name: connection_string_prefix
+      - conditionId: user_event
         params:
-          text: "${userMessageText}"
-          regex: "^mongodb"
+          event: 'test'
 
       - conditionId: database_check_connection_url
         params:
           type: mongodb
-          url: "${userMessageText}"
+          url: "${user.integrations.mongodb.connectionString}"
 
       then:
         do:
