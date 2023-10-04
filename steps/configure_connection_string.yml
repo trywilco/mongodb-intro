@@ -24,6 +24,11 @@ startFlow:
           - text: Spot our film cluster, and click on the `Connect` button.
           - text: Following this, you'll find `MongoDB for VS Code`.
           - text: ":instruction[Copy the `connection string` and paste it here.] Make sure that you update the connection string with the username and password you created earlier."
+          - components:
+            - type: form
+              form:
+                id: mongo_api_key
+                type: secret_input_form
 
           
 trigger:
