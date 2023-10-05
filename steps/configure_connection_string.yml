@@ -33,8 +33,6 @@ startFlow:
           
 trigger:
   type: secret_submitted
-  params:
-  event: test
   flowNode:
     if:
       conditions:
