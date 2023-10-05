@@ -36,6 +36,11 @@ trigger:
   flowNode:
     if:
       conditions:
+      - conditionId: text_match_regex
+        name: connection_string_prefix
+        params:
+          text: "${secretValue}"
+          regex: "^mongodb"
       - conditionId: database_check_connection_url
         params:
           type: mongodb
