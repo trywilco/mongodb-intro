@@ -32,14 +32,12 @@ startFlow:
 
           
 trigger:
-  type: user_message
+  type: secret_submitted
+  params:
+  event: test
   flowNode:
     if:
       conditions:
-      - conditionId: user_event
-        params:
-          event: 'test'
-
       - conditionId: database_check_connection_url
         params:
           type: mongodb
