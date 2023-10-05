@@ -27,7 +27,7 @@ startFlow:
           - components:
             - type: form
               form:
-                id: mongo_api_key
+                id: mongo_connection_string_form
                 type: secret_input_form
 
           
