@@ -47,7 +47,7 @@ trigger:
           params:
             integration: mongo
             key: connectionString
-            value: ${userMessageText}
+            value: ${secretValue}
 
         - actionId: bot_message
           params:
