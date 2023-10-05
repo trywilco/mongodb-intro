@@ -39,7 +39,7 @@ trigger:
       - conditionId: database_check_connection_url
         params:
           type: mongodb
-          url: "${user.integrations.mongodb.connectionString}"
+          url: "${secretValue}"
 
       then:
         do:
