@@ -9,7 +9,6 @@ startFlow:
   do:
     - actionId: bot_message
       params:
-        person: lucca
         messages:
           - text: If you're all set, the spotlight's on you.
           - text: You’ve set the stage with your first MongoDB Atlas cluster.
@@ -52,7 +51,6 @@ trigger:
 
           - actionId: bot_message
             params:
-              person: ${defaultPerson}
               messages:
                 - text: "That connection string looks good! we are ready to move on to the next step."
                   delay: 1300
@@ -61,7 +59,6 @@ trigger:
         do:
           - actionId: bot_message
             params:
-              person: ${defaultPerson}
               messages:
                 - text: "That's not correct, we received an error ${outputs.connection_test.error}. Try again!"
                   delay: 500
